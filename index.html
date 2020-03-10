@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1 id="tittle">Encuesta - Planetario de Medellin</h1>
+        <p style="font-weight: bold;" id="description">
+            Agradecemos su tiempo para responder esta encuesta sobre su visita al planetario de Medellin, tomará un par de minutos</p>
+    </header>
+    <main>
+        <form id="survey-form" method="POST">
+            <fieldset class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" name="nombre" id="name" class="form-control" placeholder="Escriba su nombre" required="">
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="correo" id="email" class="form-control" placeholder="Escriba su correo" required="" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"> 
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="number">Edad</label>
+                <input type="number" name="edad" id="number" class="form-control" placeholder="Edad" required="" min="18" max="99">
+            </fieldset>
+
+
+            <fieldset class="form-group">
+                <p>
+                    ¿Cómo describiría este lugar?</p>
+                <select id="dropdown">
+                    <option disabled="" selected="" value="">Seleccione una opción</option>
+                    <option value="1">Perfecto</option>
+                    <option value="2">Muy creativo</option>
+                    <option value="3">Muy interactivo
+                    </option>
+                    <option value="4">Genial para plan familiar y plan con amigos</option>
+                    <option value="5">Todo lo anterior</option>
+                </select>
+            </fieldset>
+
+            <fieldset class="form-group"> 
+                <p>
+                    ¿Recomiendas visitar este lugar a tus familiares y amigos?
+                </p>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">
+                    Por supuesto
+                </label>
+
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">
+                    Lo pensaría
+                </label>
+
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">
+                    No en realidad
+                </label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <p>
+                    ¿Qué es lo que más te gustó de este lugar?
+                </p>
+                <select id="dropdown">
+                    <option disabled="" selected="" value="">Seleccione una opción</option>
+                    <option value="1">El domo</option>
+                    <option value="2">Los telescopios
+                    </option>
+                    <option value="3">La arquitectura del lugar</option>
+                    <option value="4">La tienda</option>
+                    <option value="5">Las charlas temáticas dictadas por nuestros expertos</option>
+                </select>
+            </fieldset>
+
+
+            <fieldset class="form-group">
+                <p>¿Qué crees que le hace falta este lugar?
+                    <span>Escoge todas las opciones que consideres</span>
+                </p>
+                <label>
+                    <input name="prefer" value="bar" type="checkbox" class="input-checkbox">
+                    Nada, es perfecto así
+                </label>
+                <label>
+                    <input name="prefer" value="piscina" type="checkbox" class="input-checkbox">
+                    Horarios más continuos
+                </label>
+                <label>
+                    <input name="prefer" value="jacuzzi" type="checkbox" class="input-checkbox">
+                    Más atención
+                </label>
+                <label>
+                    <input name="prefer" value="caminatas" type="checkbox" class="input-checkbox">
+                    Más iluminación
+                </label>
+                <label>
+                    <input name="prefer" value="juegos" type="checkbox" class="input-checkbox">
+                    Más juegos interactivos
+                </label>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <p>¿Tienes sugerencias o comentarios?
+                </p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Ingresa tu comentario aquí..."></textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <button id="submit" type="submit" class="submit-button" aria-required="true">
+                    <a href="" aria-required="true">Enviar</a>
+                </button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
